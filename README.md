@@ -1,4 +1,13 @@
 
-# Dotnet Devcontainer Template
+# Build Your First Blazor Web App
 
-A template repo for using devcontainers to do dotnet learnings.
+https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app
+
+## [Config environment](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment)
+
+Scaffold via CLI
+
+```
+dotnet new blazor
+```
+
