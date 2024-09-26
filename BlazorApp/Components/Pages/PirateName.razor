@@ -1,0 +1,40 @@
+﻿@page "/pirate"
+@rendermode InteractiveServer
+
+<PageTitle>Pirate Name Generator</PageTitle>
+
+<h1>Pirate Name Generator</h1>
+
+<input type="text" @bind="firstName" placeholder="First Name" />
+<button class="btn btn-primary" @onclick="GeneratePirateName">Generate Pirate Name</button>
+<p role="status">Pirate Name: @myPirateName</p>
+
+
+@code {
+    private string myPirateName = "";
+    private Random rnd = new Random();
+    private string firstName = "";
+        private string[] pirateNames = [
+        "Long Beard",
+        "Black Eye",
+        "Peg Leg",
+        "Long Tooth",
+        "Evil Eye",
+        "One-Eeyed",
+        "Fishstick",
+        "Squinty Eye","Toothless",
+        "Beardless",
+        "Sea Sick",
+        "Lameleg",
+        "Salty Dog",
+        "Nautically Challenged",
+        "Landlubber",
+        "Grog Lootn"
+    ];
+
+    private void GeneratePirateName()
+    {
+       int index = rnd.Next(0, pirateNames.Length );
+        myPirateName = $"{pirateNames[index]} {firstName}";
+    }
+}
